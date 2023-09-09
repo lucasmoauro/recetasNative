@@ -2,10 +2,18 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export const FabButton = () => {
+type Props = {
+  route: string;
+};
+
+export const FabButton = ({route}: Props) => {
   return (
     <View style={styles.fabContainer}>
-      <Icon name="note-plus-outline" size={40} color="#000" />
+      {route.includes('recipes') ? (
+        <Icon name="note-plus-outline" size={40} color="#000" />
+      ) : (
+        <Icon name="note-edit-outline" size={40} color="#000" />
+      )}
     </View>
   );
 };
@@ -18,8 +26,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',
-    bottom: 100,
-    right: 30,
+    bottom: 25,
+    right: 20,
     backgroundColor: '#fafafa',
     shadowColor: '#000',
     shadowOffset: {

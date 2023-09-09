@@ -1,10 +1,17 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, TouchableOpacity} from 'react-native';
 
-export const Card = () => {
+interface Props {
+  onPress: () => void;
+}
+
+export const Card = ({onPress}: Props) => {
   return (
     <ScrollView>
-      <TouchableOpacity style={styles.card} activeOpacity={0.8}>
+      <TouchableOpacity
+        style={styles.card}
+        activeOpacity={0.8}
+        onPress={onPress}>
         <Text style={styles.cardText} adjustsFontSizeToFit={true}>
           lorem ipsum dolor
         </Text>

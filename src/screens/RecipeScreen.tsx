@@ -1,6 +1,10 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 
 export const RecipeScreen = () => {
-  return <View>RecipeScreen</View>;
+  return (
+    <View>
+      <Text>RecipeScreen</Text>
+    </View>
+  );
 };
