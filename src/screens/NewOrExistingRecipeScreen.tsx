@@ -1,7 +1,10 @@
-import React from 'react'
+import React from 'react';
+import {Text, View} from 'react-native';
 
 export const NewOrExistingRecipeScreen = () => {
   return (
-    <div>NewOrExistingRecipeScreen</div>
-  )
-}
+    <View>
+      <Text>NewOrExistingRecipe</Text>
+    </View>
+  );
+};

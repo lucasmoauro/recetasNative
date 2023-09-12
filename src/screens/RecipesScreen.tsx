@@ -17,7 +17,10 @@ export const RecipesScreen = ({navigation}: Props) => {
       </View>
 
       {/* FAB */}
-      <FabButton route="recipes" />
+      <FabButton
+        route="recipes"
+        onPress={() => navigation.navigate('NewOrExistingRecipe')}
+      />
     </View>
   );
 };

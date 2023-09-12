@@ -1,20 +1,24 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 type Props = {
   route: string;
+  onPress: () => void;
 };
 
-export const FabButton = ({route}: Props) => {
+export const FabButton = ({route, onPress}: Props) => {
   return (
-    <View style={styles.fabContainer}>
+    <TouchableOpacity
+      style={styles.fabContainer}
+      activeOpacity={0.7}
+      onPress={onPress}>
       {route.includes('recipes') ? (
         <Icon name="note-plus-outline" size={40} color="#000" />
       ) : (
         <Icon name="note-edit-outline" size={40} color="#000" />
       )}
-    </View>
+    </TouchableOpacity>
   );
 };
 
